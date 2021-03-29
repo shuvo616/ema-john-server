@@ -11,6 +11,11 @@ app.use(bodyParser.json());
 app.use(cors());
 // Change localhost port to 5000
 const port = 5000;
+
+// 
+app.get('/', (req,res) => {
+  res.send("From DB. It is working")
+})
 // Environment variable require file
 require('dotenv').config()
 // mongodb database URI code cut past here to make it dynamic
